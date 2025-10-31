@@ -23,7 +23,7 @@ CONFIG = {
 
 
 def evaluate(**config):
-    run = wandb.init(project='priors-manifold', dir=PATH, config=config)
+    run = wandb.init(project='diem-manifold', dir=PATH, config=config)
 
     runpath = PATH / f'runs/{run.name}_{run.id}'
     runpath.mkdir(parents=True, exist_ok=True)

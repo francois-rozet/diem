@@ -9,16 +9,16 @@ from pathlib import Path
 from typing import *
 
 # isort: split
-from priors.common import *
-from priors.data import *
-from priors.diffusion import *
-from priors.image import *
-from priors.nn import *
-from priors.optim import *
+from diem.common import *
+from diem.data import *
+from diem.diffusion import *
+from diem.image import *
+from diem.nn import *
+from diem.optim import *
 
 if 'SCRATCH' in os.environ:
     SCRATCH = os.environ['SCRATCH']
-    PATH = Path(SCRATCH) / 'priors/fastmri'
+    PATH = Path(SCRATCH) / 'diem/fastmri'
 else:
     PATH = Path('.')
 

@@ -1,4 +1,4 @@
-name: priors
+name: diem
 channels:
   - conda-forge
 dependencies:

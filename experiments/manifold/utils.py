@@ -13,15 +13,15 @@ from jax import Array
 from typing import *
 
 # isort: split
-from priors.common import *
-from priors.diffusion import *
-from priors.image import *
-from priors.nn import *
-from priors.optim import *
+from diem.common import *
+from diem.diffusion import *
+from diem.image import *
+from diem.nn import *
+from diem.optim import *
 
 if 'SCRATCH' in os.environ:
     SCRATCH = os.environ['SCRATCH']
-    PATH = Path(SCRATCH) / 'priors/manifold'
+    PATH = Path(SCRATCH) / 'diem/manifold'
 else:
     PATH = Path('.')
 

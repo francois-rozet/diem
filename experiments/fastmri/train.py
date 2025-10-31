@@ -69,7 +69,7 @@ def generate(model, dataset, rng, batch_size, **kwargs):
 
 def train(runid: int, lap: int):
     run = wandb.init(
-        project='priors-fastmri-kspace',
+        project='diem-fastmri-kspace',
         id=runid,
         resume='allow',
         dir=PATH,

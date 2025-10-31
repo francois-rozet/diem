@@ -4,7 +4,7 @@ This repository contains the official implementation of the paper [Learning Diff
 
 #### Abstract
 
-Diffusion models recently proved to be remarkable priors for Bayesian inverse problems. However, training these models typically requires access to large amounts of clean data, which could prove difficult in some settings. In this work, we present a novel method based on the expectation-maximization algorithm for training diffusion models from incomplete and noisy observations only. Unlike previous works, our method leads to proper diffusion models, which is crucial for downstream tasks. As part of our method, we propose and motivate a new posterior sampling scheme for unconditional diffusion models. We present empirical evidence supporting the effectiveness of our method.
+Diffusion models recently proved to be remarkable priors for Bayesian inverse problems. However, training these models typically requires access to large amounts of clean data, which could prove difficult in some settings. In this work, we present DiEM, a novel method based on the expectation-maximization algorithm for training diffusion models from incomplete and noisy observations only. Unlike previous works, DiEM leads to proper diffusion models, which is crucial for downstream tasks. As part of our methods, we propose and motivate an improved posterior sampling scheme for unconditional diffusion models. We present empirical evidence supporting the effectiveness of our approach.
 
 ## Code
 
@@ -12,10 +12,10 @@ The majority of the code is written in [Python](https://www.python.org). Neural 
 
 ```
 conda env create -f environment.yml
-conda activate priors
+conda activate diem
 ```
 
-To run the experiments, it is necessary to have access to a [Slurm](https://slurm.schedmd.com/overview.html) cluster, to login to a [Weights & Biases](https://wandb.ai) account and to install the [priors](priors) module as a package.
+To run the experiments, it is necessary to have access to a [Slurm](https://slurm.schedmd.com/overview.html) cluster, to login to a [Weights & Biases](https://wandb.ai) account and to install the [diem](diem) module as a package.
 
 ```
 pip install -e .
@@ -23,7 +23,7 @@ pip install -e .
 
 ### Organization
 
-The [priors](priors) directory contains the implementations of the [neural networks](priors/nn.py), the [diffusion models](priors/diffusion.py) and various [helpers](priors/common.py).
+The [diem](diem) directory contains the implementations of the [neural networks](diem/nn.py), the [diffusion models](diem/diffusion.py) and various [helpers](diem/common.py).
 
 The [manifold](experiments/manifold), [cifar](experiments/cifar) and [fastmri](experiments/fastmri) directories contain the scripts for the experiments (data generation, training and evaluation) as well as the notebooks that produced the figures of the paper. For example,
 

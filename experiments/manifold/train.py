@@ -48,7 +48,7 @@ CONFIG = {
 @job(cpus=4, gpus=1, ram='16GB', time='06:00:00', partition='gpu')
 def train():
     run = wandb.init(
-        project='priors-manifold-linear',
+        project='diem-manifold-linear',
         dir=PATH,
         config=CONFIG,
     )
